@@ -1,0 +1,339 @@
+
+/* GERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+
+    --bg-verde: linear-gradient(
+        90deg,
+        rgba(4, 57, 46, 1) 0%,
+        rgb(0, 153, 102, 1) 100%
+    );
+
+    --bg-vermelho: linear-gradient(
+        90deg,
+        rgb(102, 0, 0) 0%,
+        rgb(204, 0, 0) 100%
+    );
+
+    --bg-marrom: linear-gradient(
+        90deg,
+        rgba(99, 61, 0, 1) 0%,
+        rgba(149, 93, 0, 1) 100%
+    );
+
+    --bg-branco:white;
+
+    --bg-modal:#0e110eaf;
+
+    --texto-branco:white;
+
+    --texto-escuro:rgb(54,54,54);
+
+    --texto-claro:#c7c7c7;
+
+    --texto-dourado:rgb(255,217,0);
+
+    --escuro:#080808;
+
+    --borda:1.6px solid rgb(224,224,224);
+
+
+}
+
+body {
+
+    height: 100vh;
+
+    margin: 0;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: space-evenly;
+
+    font-family: "Poppins", sans-serif;
+
+    background: var(--bg-verde);
+
+}
+
+h1 {
+
+    margin: 0;
+
+    font-size: 1rem;
+
+}
+
+h1:hover, h2:hover {
+
+    cursor: default;
+
+}
+
+/* INFO */
+
+#info {
+
+    text-align: center;
+
+    width: 15rem;
+
+    color: var(--texto-dourado);
+}
+
+#info__titulo {
+
+    font-size: 2rem;
+}
+
+.info__jogador {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 1rem;
+
+    padding: 0.5rem;
+
+    border-radius: 0.3rem;
+
+    border: var(--borda);
+
+    color: var(--escuro);
+
+    background: var(--bg-branco);
+
+}
+
+.info__jogador__icone {
+
+    height: 1.3rem;
+
+    padding-top: 0.13rem;
+
+
+}
+
+.cross {
+
+    background-image: url(assets/cross.png);
+}
+
+.circle {
+
+    background-image: url(assets/circle.png);
+}
+
+.cross, .circle {
+
+    background-size: cover;
+}
+
+/* GRADE */
+
+#grade {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 400px;
+
+    height: 400px;
+
+    grid-gap: 6.4px;
+
+    gap: 6.4px;
+
+    padding: 6.4px;
+
+    border-radius: 8px;
+
+    background: var(--bg-marrom);
+
+}
+
+.quadrado {
+
+    background-color: var(--bg-branco);
+
+    border-radius: 4.8px;
+
+    border: var(--borda);
+}
+
+.quadrado:hover {
+
+    cursor: pointer;
+
+    box-shadow: 0 0 8px 2px var(--texto-escuro);
+
+}
+
+/* INSTRUCOES */
+
+#instrucoes {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 15rem;
+}
+
+#instrucoes__texto {
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    color: var(--texto-branco);
+
+}
+
+#instrucoes__botao {
+
+    cursor: pointer;
+
+    width: 10rem;
+
+    padding: 0.5rem 1rem;
+
+    font-size: 1rem;
+
+    border-radius: 2rem;
+
+    background: var(--escuro);
+
+    border:var(--borda);
+
+    color: var(--texto-branco);
+}
+
+#instrucoes__botao:active {
+
+    transform: translateY(0.125rem);
+
+}
+
+/* MODAL */
+
+#modal {
+
+
+    display: none;
+
+    align-items: center;
+
+    position: absolute;
+
+    justify-content: center;
+
+    height: 100vh;
+
+    width: 100vw;
+
+    background: var(--bg-modal);
+
+
+}
+
+#modal__conteudo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 65%;
+
+    width: 40%;
+
+    border-radius: 5rem;
+
+    color: var(--texto-branco);
+
+    background: var(--bg-vermelho);
+
+    border: var(--escuro) solid 0.1rem;
+}
+
+/* FORMULARIO */
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+label {
+    display: none;
+
+}
+
+input {
+    margin: 1.25rem;
+
+    font-size: 1rem;
+
+    border-radius: 2rem;
+
+    padding: 0.625rem 1.25rem;
+
+}
+
+::placeholder {
+    font-style: italic;
+}
+
+input[type="submit"]:active {
+    transform: translateY(00.125rem);
+
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1100px) {
+
+    #grade {
+
+        width: 300px;
+
+        height: 300px;
+
+    }
+
+    #info__titulo {
+        margin: 0 0 1rem;
+        
+    }
+
+    body {
+        align-content: center;
+    }
+
+    #modal__conteudo {
+        text-align: center;
+        height: 60%;
+        width: 80%;
+    }
+
+    input {
+        width: 10rem;
+    }
+}

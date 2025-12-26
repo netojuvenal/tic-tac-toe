@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Jogo da Velha</title>
+
+</head>
+
+<body>
+
+    <div id="info">
+
+        <h2 id="info__titulo">JOGO DA VELHA</h2>
+
+        <div class="info__jogador">
+            <img src="assets/cross.png" alt="Icone do jogador 1" class="info__jogador__icone">
+            <h1 id="info__jogador_nome1">Jogador 1</h1>
+            <h1>:</h1>
+            <h1 id="info___jogador__pontos1">0</h1>
+        </div>
+
+        <div class="info__jogador">
+            <img src="assets/circle.png" alt="Icone do jogador 2" class="info__jogador__icone">
+            <h1 id="info__jogador_nome2">Jogador 2</h1>
+            <h1>:</h1>
+            <h1 id="info___jogador__pontos2">0</h1>
+        </div>
+
+    </div>
+    
+    <div id="grade">
+
+        <div id="grade_quadrado-1" class="quadrado"></div>
+        <div id="grade_quadrado-2" class="quadrado"></div>
+        <div id="grade_quadrado-3" class="quadrado"></div>
+        <div id="grade_quadrado-4" class="quadrado"></div>
+        <div id="grade_quadrado-5" class="quadrado"></div>
+        <div id="grade_quadrado-6" class="quadrado"></div>
+        <div id="grade_quadrado-7" class="quadrado"></div>
+        <div id="grade_quadrado-8" class="quadrado"></div>
+        <div id="grade_quadrado-9" class="quadrado"></div>
+
+    </div>
+
+    <div id="instrucoes">
+        <h2 id="instrucoes__texto">Clique no botão para começar</h2>
+        <button id="instrucoes__botao">Começar jogo</button>
+    </div>
+
+    <div id="modal">
+
+        <div id="modal__conteudo">
+            <h2>Insira o nome dos jogadores</h2>
+            <form>
+                <label for="jogador1">Jogador 1 </label>
+                <input type="text" id="jogador1" name="jogador1" placeholder="Jogador 1" maxlength="10" required>
+
+                <label for="jogador2">Jogador 2 </label>
+                <input type="text" id="jogador2" name="jogador2" placeholder="Jogador 2" maxlength="10" required>
+
+                <input type="submit" value="Iniciar Jogo">
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
